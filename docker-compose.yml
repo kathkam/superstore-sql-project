@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: superstore_sql_project
+    environment:
+      POSTGRES_DB: superstore_db
+      POSTGRES_USER: superstore
+      POSTGRES_PASSWORD: superstore
+    ports:
+      - "5432:5432"
+    volumes:
+      # 1) database storage
+      - superstore_pgdata:/var/lib/postgresql/data
+
+      # 2) SQL scripts
+      - ./sql:/docker-entrypoint-initdb.d
+
+      # 3) folder with the source csv data
+      - ./data:/data
+    restart: unless-stopped
+
+volumes:
+  superstore_pgdata:
