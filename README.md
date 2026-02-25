@@ -83,10 +83,10 @@ The fact table represents order-line level sales.
 
 ### 1. Clone the repository
 Open a terminal (Git Bash, PowerShell, or CMD) and run:
-
+```
 git clone https://github.com/kathkam/superstore-sql-project.git  
 cd superstore_sql_project
-
+```
 ### 2. Download dataset
 Download the Superstore CSV from Kaggle and place it in the /data folder with name "superstore_orders.csv":
 superstore_sql_project/data/superstore_orders.csv
