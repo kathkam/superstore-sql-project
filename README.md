@@ -84,7 +84,9 @@ The fact table represents order-line level sales.
 ### 1. Clone the repository
 Open a terminal (Git Bash, PowerShell, or CMD) and run:
 ```
-git clone https://github.com/kathkam/superstore-sql-project.git  
+git clone https://github.com/kathkam/superstore-sql-project.git
+```
+```
 cd superstore_sql_project
 ```
 ### 2. Download dataset
@@ -93,7 +95,9 @@ superstore_sql_project/data/superstore_orders.csv
 
 ### 3. Start PostgreSQL with Docker
 From inside the project folder (where docker-compose.yml is located), open the terminal and run:  
+```
 docker compose up -d
+```
 
 This will start a PostgreSQL container.
 
@@ -120,9 +124,13 @@ Execute SQL scripts from the /sql folder in numerical order:
 
 ## Resetting the Database (Optional)
 PostgreSQL initialization scripts only run on first startup.  
-If you want to completely reset the database and re-run everything:  
-docker compose down -v  
+If you want to completely reset the database and re-run everything: 
+```
+docker compose down -v
+```
+```
 docker compose up -d
+```
 
 The -v flag removes the Docker volume, which deletes all database data.  
 After resetting, re-run the SQL scripts in order.
